@@ -1,0 +1,154 @@
+* {
+ background-color: #A7C6FD;   
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: VT323;
+}
+
+/* Typed text styling */
+
+.typedIntro {
+    margin-top: 5%;
+    display: grid;
+    place-items: center;
+}
+
+.lineOne {
+    width: 14ch;
+    color: #F2F2F2;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-size: 2em;
+}
+
+/* cursor blinking */
+@keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+.lineTwo {
+    color: #F2F2F2;
+}
+
+/* Nav Styling */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: white;
+    
+}
+
+.header {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 50px;
+}
+
+.navLinks ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Adjust the gap between items as needed */
+}
+
+.navLinks ul li {
+    cursor: pointer;
+}
+
+/* Main image styling */
+.mainPic {
+    display: block;
+    margin: 5% auto;
+    width: 75%;
+    height: 75%;
+}
+
+
+/* Modal styling */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0); 
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: #F2F2F2;
+    overflow: hidden;
+    width:350px;
+    max-width: 80%;
+    cursor: pointer;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1); 
+
+}
+
+.modalHeader {
+    padding: 10px 15px;
+    display: flex;
+    background-color: #F2F2F2;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.modalHeader .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.title {
+    background-color: #F2F2F2;
+}
+
+.modalHeader .closeButton {
+    background-color: #F2F2F2;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.modalBody {
+    background-color: #F2F2F2;
+    padding: 10px 15px;
+
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+/* Tooltips styling */
